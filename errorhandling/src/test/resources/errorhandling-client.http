@@ -1,0 +1,13 @@
+### cause an unexpected error
+GET http://localhost:8080/unexpected
+
+### cause a validation error
+POST http://localhost:8080/validate
+Content-Type: application/json
+
+{
+  "age": 18
+}
+
+### cause a timeout in a downstream service
+GET http://localhost:8080/timeout

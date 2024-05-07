@@ -1,0 +1,26 @@
+### trigger a RestTemplate call without (info) logging
+GET http://localhost:8080/
+Accept: application/json
+
+### trigger a RestTemplate call with info logging
+GET http://localhost:8080/
+Accept: application/json
+X-Log-Request: true
+X-Log-Response: true
+
+### enable debug logging
+POST http://localhost:8080/actuator/loggers/inthemix.client.RestTracing
+Content-Type: application/json
+
+{"configuredLevel": "debug"}
+
+### trigger a RestTemplate call with debug logging of request only
+GET http://localhost:8080/
+Accept: application/json
+X-Log-Response: false
+
+### disable debug logging
+POST http://localhost:8080/actuator/loggers/inthemix.client.RestTracing
+Content-Type: application/json
+
+{"configuredLevel": "info"}

@@ -1,0 +1,32 @@
+### buy an instrument
+POST http://localhost:8080/order
+Content-Type: application/json
+
+{
+  "ean": "123456",
+  "category": "INSTRUMENT",
+  "quantity": 2,
+  "price": 234.99
+}
+
+### buy another instrument
+POST http://localhost:8080/order
+Content-Type: application/json
+
+{
+  "ean": "234567",
+  "category": "INSTRUMENT",
+  "quantity": 1,
+  "price": 123.99
+}
+
+### buy a set of stereo speakers
+POST http://localhost:8080/order
+Content-Type: application/json
+
+{
+  "ean": "345678",
+  "category": "SPEAKER",
+  "quantity": 2,
+  "price": 456.99
+}

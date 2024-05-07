@@ -1,0 +1,58 @@
+### static resource, no caching request headers
+GET http://localhost:8080/static.json
+Accept: application/json
+
+### static resource, If-Modified-Since request header
+GET http://localhost:8080/static.json
+Accept: application/json
+If-Modified-Since: Mon, 10 Jul 2023 08:51:54 GMT
+
+
+
+
+
+
+
+
+
+
+
+
+
+### dynamic resource with shallow ETag, no caching request headers
+GET http://localhost:8080/shallow/1
+Accept: application/json
+
+### dynamic resource with shallow ETag, If-None-Match request header
+GET http://localhost:8080/shallow/1
+Accept: application/json
+If-None-Match: "0daacc2ec58afd7531c5312f3e54d6907"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### dynamic resource with deep ETag, no caching request headers
+GET http://localhost:8080/deep/1
+Accept: application/json
+
+### dynamic resource with deep ETag, If-None-Match request header
+GET http://localhost:8080/deep/1
+Accept: application/json
+If-None-Match: "etag-1"
+
+
+
